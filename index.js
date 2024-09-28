@@ -149,10 +149,6 @@ app.get('/loyalty-points', (req, res) => {
   res.send(loyaltyPoint);
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello, Wlcome to FlipDeal');
-});
-
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
