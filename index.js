@@ -1,9 +1,9 @@
 const express = require('express');
 const { resolve } = require('path');
-// let cors = require('cors');
+let cors = require('cors');
 
 const app = express();
-// app.use(cors());
+app.use(cors());
 const port = 3000;
 
 // server-side values:
@@ -147,10 +147,6 @@ app.get('/loyalty-points', (req, res) => {
   const purchaseAmount = parseFloat(req.query.purchaseAmount);
   const loyaltyPoint = (purchaseAmount * 2).toString();
   res.send(loyaltyPoint);
-});
-
-app.get('/', (req, res) => {
-  res.send(`Welcome!! to FlipDeal`);
 });
 
 app.listen(port, () => {
